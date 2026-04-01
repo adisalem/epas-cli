@@ -13,7 +13,7 @@ public class EmployeeRepository {
         Employee emp1 = new Employee(1, "Daniel", "Agar", LocalDate.of(2025, 8, 17), 105945.50);
         employees.add(emp1);
 
-        Employee emp2 = new Employee(2, "Bernard", "Shaw", LocalDate.of(2025, 2, 3), 197750.00);
+        Employee emp2 = new Employee(2, "Benard", "Shaw", LocalDate.of(2025, 2, 3), 197750.00);
         emp2.setPensionPlan(new PensionPlan("EX0089", LocalDate.of(2026, 2, 3), 450.00));
         employees.add(emp2);
 
