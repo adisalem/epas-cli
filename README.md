@@ -35,15 +35,15 @@ java -jar target/epas-cli-1.0-SNAPSHOT.jar
 
 The application includes 7 sample employees:
 
-| ID | Name | Salary | Employment Date | Pension Plan |
-|----|------|--------|-----------------|--------------|
-| 1 | Daniel Agar | $105,945.50 | 2025-08-17 | - |
-| 2 | Bernard Shaw | $197,750.00 | 2025-02-03 | EX0089 |
-| 3 | Carly Jones | $842,000.75 | 2024-05-16 | SM2307 |
-| 4 | Wesley Schneider | $174,500.00 | 2025-04-30 | - |
-| 5 | Anna Wiltord | $185,750.00 | 2025-09-15 | - |
-| 6 | Yosef Tesfalem | $100,000.00 | 2025-07-31 | - |
-| 7 | Johnny Edwards | $95,500.00 | 2025-07-09 | - |
+| # | Plan Ref | First Name | Last Name | Salary | Employment Date | Enrollment Date | Monthly Contribution |
+|---|----------|------------|-----------|--------|-----------------|-----------------|----------------------|
+| 1 | - | Daniel | Agar | $105,945.50 | 2025-08-17 | - | - |
+| 2 | EX0089 | Benard | Shaw | $197,750.00 | 2025-02-03 | 2026-02-03 | $450.00 |
+| 3 | SM2307 | Carly | Jones | $842,000.75 | 2024-05-16 | 2025-05-17 | $1,555.50 |
+| 4 | - | Wesley | Schneider | $174,500.00 | 2025-04-30 | - | - |
+| 5 | - | Anna | Wiltord | $185,750.00 | 2025-09-15 | - | - |
+| 6 | - | Yosef | Tesfalem | $100,000.00 | 2025-07-31 | - | - |
+| 7 | - | Johnny | Edwards | $95,500.00 | 2025-07-09 | - | - |
 
 ## CI/CD Pipeline
 
