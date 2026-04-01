@@ -24,7 +24,7 @@ jobs:
       run: mvn clean compile package
     
     - name: Run application
-      run: java -jar target/epas-cli-1.0-SNAPSHOT.jar
+      run: echo "0" | java -jar target/epas-cli-1.0-SNAPSHOT.jar
     
     - name: Archives artifacts
       if: always()
