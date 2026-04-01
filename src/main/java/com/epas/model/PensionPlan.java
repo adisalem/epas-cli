@@ -2,24 +2,17 @@ package com.epas.model;
 
 import java.time.LocalDate;
 
-/**
- * PensionPlan entity class representing a pension plan for an employee.
- */
 public class PensionPlan {
     private String planReferenceNumber;
     private LocalDate enrollmentDate;
     private double monthlyContribution;
 
-    /**
-     * Constructor for PensionPlan
-     */
     public PensionPlan(String planReferenceNumber, LocalDate enrollmentDate, double monthlyContribution) {
         this.planReferenceNumber = planReferenceNumber;
         this.enrollmentDate = enrollmentDate;
         this.monthlyContribution = monthlyContribution;
     }
 
-    // Getters and Setters
     public String getPlanReferenceNumber() {
         return planReferenceNumber;
     }

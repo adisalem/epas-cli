@@ -5,9 +5,6 @@ import java.time.Period;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-/**
- * Employee entity class representing an employee in the pension plan system.
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Employee {
     private long employeeId;
@@ -17,11 +14,8 @@ public class Employee {
     private double yearlySalary;
     private PensionPlan pensionPlan;
 
-    /**
-     * Constructor for Employee
-     */
     public Employee(long employeeId, String firstName, String lastName,
-                    LocalDate employmentDate, double yearlySalary) {
+            LocalDate employmentDate, double yearlySalary) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -30,24 +24,16 @@ public class Employee {
         this.pensionPlan = null;
     }
 
-    /**
-     * Get years of employment
-     */
     @JsonIgnore
     public long getYearsOfEmployment() {
         return Period.between(employmentDate, LocalDate.now()).getYears();
     }
 
-    /**
-     * Check if employee is qualified for pension plan enrollment
-     * Criteria: employed for at least 1 year, yearly salary >= $100,000, not already enrolled
-     */
     @JsonIgnore
     public boolean isQualifiedForEnrollment() {
         return getYearsOfEmployment() >= 1 && yearlySalary >= 100000 && pensionPlan == null;
     }
 
-    // Getters and Setters
     public long getEmployeeId() {
         return employeeId;
     }

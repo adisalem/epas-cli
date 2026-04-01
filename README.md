@@ -1,102 +1,31 @@
-# Employee Pension Administration System (EPAS) CLI
+# EPAS - Employee Pension Administration System
 
-A Java-based Command-Line Interface (CLI) application for managing employee pension plans and generating quarterly enrollment reports.
+A simple Java CLI tool to manage employee pension enrollments and generate quarterly reports.
 
-## Project Overview
+## What it does
 
-This application helps HR managers manage employee pension plan enrollment by:
-- Viewing all employees with their pension plan details
-- Generating reports for current quarter eligible enrollees
-- Generating reports for next quarter upcoming eligible enrollees
+- **List all employees** - sorted by salary (high to low) and name
+- **Current quarter enrollees** - who's eligible for Q2 2026
+- **Next quarter candidates** - who's eligible for Q3 2026
 
-## Features
+Eligible means: employed 1+ year, salary ≥ $100k, not already enrolled.
 
-### Feature 1: All Employees Report
-Displays all employees in JSON format, sorted by:
-- Yearly Salary (descending)
-- Last Name (ascending)
-
-Includes pension plan information if the employee is enrolled.
-
-### Feature 2: Current Quarterly Enrollees Report
-Displays employees eligible for enrollment in Q2 2026 (April - June), sorted by employment date (descending).
-
-**Eligibility Criteria:**
-- Employed for at least 1 year by quarter end
-- Yearly salary >= $100,000
-- Not already enrolled in a pension plan
-
-### Feature 3: Next Quarterly Upcoming Enrollees Report
-Displays employees eligible for enrollment in Q3 2026 (July - September), sorted by:
-- Employment Date (descending)
-- Yearly Salary (ascending)
-
-**Eligibility Criteria:**
-- Same as Feature 2
-
-## Project Structure
-
-```
-epas-cli/
-├── src/
-│   ├── main/
-│   │   ├── java/com/epas/
-│   │   │   ├── app/EPASApp.java          # Main application class
-│   │   │   └── model/
-│   │   │       ├── Employee.java         # Employee entity
-│   │   │       └── PensionPlan.java      # PensionPlan entity
-│   │   └── resources/
-│   └── test/java/
-├── .github/workflows/
-│   └── maven.yml                         # GitHub Actions CI/CD pipeline
-├── pom.xml                               # Maven build configuration
-├── README.md                             # This file
-└── screenshots/                          # Evidence screenshots
-```
-
-## Technology Stack
-
-- **Language:** Java 17
-- **Build Tool:** Apache Maven 3.x
-- **JSON Processing:** Jackson 2.15.2
-- **CI/CD:** GitHub Actions
-- **Version Control:** Git & GitHub
-
-## Building the Project
-
-### Prerequisites
-- Java 17 or higher
-- Maven 3.6.0 or higher
-
-### Build Steps
+## Quick start
 
 ```bash
-# Navigate to project directory
-cd epas-cli
+# Build
+mvn clean package
 
-# Clean and compile the project
-mvn clean compile
-
-# Build the executable JAR
-mvn package
-
-# Run the application
+# Run
 java -jar target/epas-cli-1.0-SNAPSHOT.jar
 ```
 
-## Running the Application
+## Tech
 
-```bash
-# Using Maven
-mvn exec:java -Dexec.mainClass="com.epas.app.EPASApp"
-
-# Using the compiled JAR
-java -jar target/epas-cli-1.0-SNAPSHOT.jar
-```
-
-## Sample Output
-
-When executed, the application produces three JSON reports to standard output:
+- Java 17
+- Maven
+- Jackson (JSON)
+- GitHub Actions (CI/CD)
 
 1. **All Employees Report** - Complete employee list with pension details
 2. **Current Quarter Report** - Q2 2026 eligible enrollees
@@ -129,11 +58,3 @@ The workflow:
 4. Runs the application
 5. Archives build artifacts
 
-## Author
-
-Created for CS489 - Applied Software Development Lab2a
-MIU - Department of Computer Science
-
-## License
-
-This is a student project for educational purposes.
